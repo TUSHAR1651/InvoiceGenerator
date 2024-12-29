@@ -19,7 +19,7 @@ import {
   FormMessage,
 } from "./ui/form";
 
-const URL = import.meta.env.VITE_API_URL;
+const URL = import.meta.env.URL;
 
 
 const signupSchema = z.object({
