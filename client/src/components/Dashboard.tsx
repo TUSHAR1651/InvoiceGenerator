@@ -6,7 +6,7 @@ import Cookies from 'js-cookie';
 import axios from "axios";
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 
-const URL = import.meta.env.URL;
+const URL = import.meta.env.VITE_URL;
 
 interface Product {
   id: number;
