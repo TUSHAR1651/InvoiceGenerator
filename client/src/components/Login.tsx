@@ -11,6 +11,9 @@ import Cookies from 'js-cookie';
 import Images1 from '../assets/Images1.jpg';
 import Images2 from '../assets/images2.jpeg';
 
+const URL = import.meta.env.VITE_API_URL;
+
+
 import {
   Form,
   FormControl,
@@ -45,7 +48,7 @@ const Login = () => {
     try {
       setLoading(true);
       // Simulate API call
-        await axios.post("http://localhost:3000/user/login", values).then((res) => {
+        await axios.post(`${URL}/user/login`, values).then((res) => {
             if (res.status === 400) {
                 toast({
                     variant: "destructive",

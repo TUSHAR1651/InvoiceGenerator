@@ -6,6 +6,8 @@ import Cookies from 'js-cookie';
 import axios from "axios";
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 
+const URL = import.meta.env.VITE_API_URL;
+
 interface Product {
   id: number;
   name: string;
@@ -93,7 +95,7 @@ const Dashboard = () => {
   
       // API call to create the PDF
       const response = await axios.post(
-        "http://localhost:3000/bill/create",
+        `${URL}/bill/create`,
         {
           userId,
           amount: products.reduce(

@@ -19,6 +19,8 @@ import {
   FormMessage,
 } from "./ui/form";
 
+const URL = import.meta.env.VITE_API_URL;
+
 
 const signupSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -50,7 +52,7 @@ const Signup = () => {
     try {
       setLoading(true);
       // Simulate API call
-        await axios.post("http://localhost:3000/user/signup", values).then((res) => {
+        await axios.post(`${URL}/user/signup`, values).then((res) => {
             if (res.status === 400) {
                 setError(res.data.message);
             } else if (res.status === 500) {
