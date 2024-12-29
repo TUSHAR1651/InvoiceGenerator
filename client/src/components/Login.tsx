@@ -11,7 +11,7 @@ import Cookies from 'js-cookie';
 import Images1 from '../assets/Images1.jpg';
 import Images2 from '../assets/images2.jpeg';
 
-const URL = import.meta.env.VITE_API_URL;
+const URL = import.meta.env.URL;
 
 
 import {
