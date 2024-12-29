@@ -6,7 +6,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import UserRoute from './Routes/UserRoute';
 import BillRouter from './Routes/BillRoute';
-import { domToBlock } from 'blockly/core/xml';
 
 dotenv.config();
 const PORT = process.env.PORT;
